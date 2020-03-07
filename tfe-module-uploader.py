@@ -3,7 +3,8 @@ import tarfile
 import requests
 import argparse
 
-parser = argparse.ArgumentParser(description='Upload a terraform module to Terraform Enterprise or Cloud')
+parser = argparse.ArgumentParser(description='Upload a terraform module to Terraform Enterprise or Cloud',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--organization', help='TFE/TFC organization')
 parser.add_argument('--hostname', help='Custom hostname if not TFC', default='app.terraform.io')
 parser.add_argument('--module-name', help='Module name')
